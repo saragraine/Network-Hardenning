@@ -1,0 +1,17 @@
+03/13/2026-09:07:25.862768  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46240 -> 10.10.20.10:80
+03/13/2026-09:07:25.862776  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46244 -> 10.10.20.10:80
+03/13/2026-09:07:25.878108  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46256 -> 10.10.20.10:80
+03/13/2026-09:07:25.879103  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46262 -> 10.10.20.10:80
+03/13/2026-09:07:25.862774  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46240 -> 10.10.20.10:80
+03/13/2026-09:07:25.862778  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46244 -> 10.10.20.10:80
+03/13/2026-09:07:25.879108  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46262 -> 10.10.20.10:80
+03/13/2026-09:07:25.878111  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:46256 -> 10.10.20.10:80
+03/13/2026-09:13:08.592323  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47868 -> 10.10.20.10:80
+03/13/2026-09:13:08.594367  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47886 -> 10.10.20.10:80
+03/13/2026-09:13:08.592340  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47868 -> 10.10.20.10:80
+03/13/2026-09:13:08.594372  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47886 -> 10.10.20.10:80
+03/13/2026-09:13:08.601132  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47894 -> 10.10.20.10:80
+03/13/2026-09:13:08.601139  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47894 -> 10.10.20.10:80
+03/13/2026-09:13:08.603601  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47896 -> 10.10.20.10:80
+03/13/2026-09:13:08.603594  [**] [1:2024364:5] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 10.10.10.10:47896 -> 10.10.20.10:80
+0
