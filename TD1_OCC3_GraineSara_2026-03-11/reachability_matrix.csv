@@ -1,0 +1,9 @@
+ID;Source zone;Source asset;Destination zone;Destination asset;Proto;Port;Purpose;Owner;Status
+F01;LAN;client-kali;DMZ;srv-web;TCP;22;Remote admin during lab only;student;REVIEW 
+F02;LAN;client-kali;Trust Boundary;gw-fw;UDP/TCP;53;DNS only if gateway provides it;lab;REVIEW 
+F03;LAN;client-kali;Trust Boundary;gw-fw;UDP;123;Time sync only if gateway provides NTP;lab;REVIEW 
+F04;LAN;client-kali;DMZ;srv-web;TCP;80;Application test;app owner;ALLOW 
+F05;LAN;client-kali;DMZ;srv-web;TCP;443;HTTPS application test if configured;app owner;REVIEW
+F06;LAN;client-kali;DMZ;srv-web;ICMP;—;Connectivity check;lab;REVIEW
+F07;DMZ;srv-web;LAN;client-kali;TCP;—;Response traffic;auto;ALLOW 
+F08;any;any;any;any;any;any;Default deny;security;DENY
