@@ -1,0 +1,30 @@
+Selected interface: **enp0s3**
+
+Role:
+This interface is the **DMZ-connected network interface** on **sensor-ids**.
+
+Justification:
+The IDS must monitor exchanges occurring on the **NH-DMZ segment** between **gw-fw** and **srv-web**. The interface **enp0s3** is attached to the **10.10.20.0/24** network, which is the segment carrying the server-side traffic relevant to this lab.
+
+Promiscuous mode:
+Promiscuous mode was activated on **enp0s3** so that **sensor-ids** could inspect all packets traversing the DMZ segment, including traffic not explicitly destined for the sensor itself.
+
+Validation method:
+The interface choice was validated by capturing packets with **tcpdump** while generating network activity toward **srv-web** from **client-kali**.
+
+Validation commands:
+On **client-kali**:
+
+```bash
+curl http://10.10.20.10/
+ping -c 3 10.10.20.10
+```
+
+On **sensor-ids**:
+
+```bash
+sudo tcpdump -i enp0s3 host 10.10.20.10
+```
+
+Observed outcome:
+Traffic involving **10.10.20.10** was successfully observed on **sensor-ids**, showing that **enp0s3** is the correct monitoring interface for DMZ traffic capture.
