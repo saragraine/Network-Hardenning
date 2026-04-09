@@ -74,6 +74,6 @@ This TD demonstrated a complete basic IDS workflow: sensor placement validation,
 
 ## Notes
 
-- All traffic generation was performed داخل the isolated lab environment only.
+- All traffic generation was performed inside the isolated lab environment only.
 - Interface names may vary depending on the VM configuration.
 - Some HTTP tests may return `404 Not Found`; this does not invalidate detection if the request URI matched the Suricata rule.
