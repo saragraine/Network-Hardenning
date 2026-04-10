@@ -1,17 +1,19 @@
 # SSH hardening
 
-Target host: srv-web (10.10.20.10)
+Target: srv-web (10.10.20.10)
 
-Controls applied:
+## Applied settings
 - PasswordAuthentication no
 - PermitRootLogin no
 - AllowUsers adminX
 - PubkeyAuthentication yes
 - MaxAuthTries 3
 - LoginGraceTime 30
+- KbdInteractiveAuthentication no
 
-Purpose:
-- Disable password-based attacks
-- Block direct root SSH access
-- Restrict login to one admin account
-- Keep authentication auditable
+## Rationale
+- removes password-based access
+- blocks direct root SSH login
+- restricts access to a dedicated admin account
+- reduces brute-force opportunities
+- improves auditability
