@@ -373,30 +373,7 @@ These limitations should be documented honestly in the final report.
 
 ---
 
-## How to Use This Repository
 
-### Review the coursework
-
-Read the TD folders in sequence to understand how the final hardening pack was built.
-
-### Re-run tests
-
-Use the regression suite to validate whether the deployed configuration still matches the intended policy.
-
-### Update evidence
-
-Whenever a change is made to firewall, TLS, IDS, or remote access, rerun the tests and store fresh outputs.
-
-### Maintain report consistency
-
-If the technical state changes, update:
-
-* the claims table,
-* referenced evidence paths,
-* executive summary,
-* residual risk notes.
-
----
 
 ## Conclusion
 
