@@ -1,25 +1,26 @@
 # Failure modes
 
 ## FM-01 Locked out of SSH
-Symptôme: plus d'accès après modification de sshd_config.
-Fix: garder une console ouverte, valider avec `sshd -t`.
+Symptom: no access after modifying sshd_config.
+Fix: keep a console open and validate with `sshd -t`.
 
 ## FM-02 Password auth still enabled
-Symptôme: login par mot de passe encore possible.
-Fix: vérifier `/etc/ssh/sshd_config.d/50-cloud-init.conf`.
+Symptom: password login remains possible.
+Fix: check `/etc/ssh/sshd_config.d/50-cloud-init.conf`.
 
 ## FM-03 IKEv2 negotiation fails
-Symptôme: `ipsec statusall` sans SA.
-Fix: vérifier PSK, left/right, sous-réseaux, journaux.
+Symptom: `ipsec statusall` shows no SA.
+Fix: verify PSK, left/right, subnets, and logs.
 
 ## FM-04 VPN up but no traffic
-Symptôme: SA établie mais ping KO.
-Fix: vérifier routes statiques, ip_forward, firewall.
+Symptom: SA established but ping fails.
+Fix: verify static routes, ip_forward, and firewall rules.
 
 ## FM-05 Proposal mismatch
-Symptôme: NO_PROPOSAL_CHOSEN.
-Fix: aligner exactement `ike=` et `esp=` des deux côtés.
+Symptom: NO_PROPOSAL_CHOSEN.
+Fix: align `ike=` and `esp=` exactly on both sides.
 
 ## FM-06 WAN attachment issue
-Symptôme: les gateways ne se joignent pas sur 10.10.99.0/24.
-Fix: vérifier les adapters VirtualBox et le bon réseau interne `NH-WAN`.
+Symptom: gateways cannot reach each other on 10.10.99.0/24.
+Fix: verify VirtualBox adapters and the exact internal network name `NH-WAN`.
+EOF
