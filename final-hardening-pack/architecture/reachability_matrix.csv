@@ -1,0 +1,8 @@
+source,destination,service,port/proto,expected,state,notes
+client-kali,srv-web,HTTPS,443/tcp,ALLOW,TO_VALIDATE,Main published service
+client-kali,srv-web,SSH,22/tcp,DENY,TO_VALIDATE,Should not be reachable unless explicitly allowed
+client-kali,srv-web,HTTP,80/tcp,DENY_OR_REDIRECT,TO_VALIDATE,Depends on TD4 design
+client-kali,gw-fw,ICMP,icmp,ALLOW,TO_VALIDATE,Administrative troubleshooting only
+sensor-ids,srv-web,observe traffic,n/a,ALLOW,TO_VALIDATE,Passive monitoring path
+authorized-admin,srv-web,SSH over VPN,22/tcp,ALLOW,TO_VALIDATE,Only through approved remote-access path
+unauthorized-path,srv-web,SSH,22/tcp,DENY,TO_VALIDATE,Remote admin must not bypass policy

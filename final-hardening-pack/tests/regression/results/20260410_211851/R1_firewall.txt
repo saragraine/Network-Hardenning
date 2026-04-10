@@ -1,0 +1,18 @@
+=== R1_firewall ===
+What it tests: allowed HTTPS flow and blocked forbidden port
+Expected result: 443 works; 22 fails
+Timestamp: ven. 10 avril 2026 21:18:51 CEST
+
+--- Positive test: HTTPS to 10.10.20.10:443 ---
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0
+curl: (7) Failed to connect to 10.10.20.10 port 443 after 2 ms: Could not connect to server
+Positive return code: 7
+
+--- Negative test: TCP/22 to 10.10.20.10 ---
+10.10.20.10: inverse host lookup failed: Host name lookup failure
+(UNKNOWN) [10.10.20.10] 22 (ssh) open
+Negative return code: 0
+
+RESULT: FAIL

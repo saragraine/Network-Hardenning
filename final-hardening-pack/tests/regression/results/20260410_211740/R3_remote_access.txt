@@ -1,0 +1,19 @@
+=== R3_remote_access ===
+What it tests: unauthorized SSH should fail; approved path should succeed if VPN is active
+Expected result: non-approved direct SSH fails
+Timestamp: ven. 10 avril 2026 21:17:40 CEST
+
+--- TCP reachability to SSH ---
+10.10.20.10: inverse host lookup failed: Host name lookup failure
+(UNKNOWN) [10.10.20.10] 22 (ssh) open
+TCP/22 return code: 0
+
+--- Direct SSH probe (credential/policy level) ---
+adminX@10.10.20.10: Permission denied (publickey).
+Direct SSH return code: 255
+
+--- Optional VPN/interface state ---
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0             UP             10.10.10.10/24 fe80::a00:27ff:fe41:97f3/64 
+
+RESULT: PASS (unauthorized direct SSH not usable)
