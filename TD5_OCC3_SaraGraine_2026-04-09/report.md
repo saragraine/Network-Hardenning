@@ -2,35 +2,35 @@
 
 ## 1. Threat model
 
-Asset: accès administratif aux systèmes entre deux sites.
+Asset: administrative access to systems across two sites.
 
-Adversary: attaquant externe sur le segment WAN ou poste interne compromis.
+Adversary: external attacker on the WAN segment or compromised internal workstation.
 
 Key threats:
-- attaque par mot de passe contre SSH
-- vol de clé privée SSH
-- interception du trafic inter-site sans protection
-- extension latérale si le tunnel VPN est trop large
+- password attacks against SSH
+- theft of an SSH private key
+- interception of inter-site traffic if unprotected
+- lateral movement if the VPN scope is too broad
 
 Security goals:
-- seul l'utilisateur d'administration autorisé peut se connecter en SSH
-- l'authentification par mot de passe est désactivée
-- le login root direct en SSH est désactivé
-- le trafic entre 10.10.10.0/24 et 10.10.20.0/24 est chiffré et protégé en intégrité
-- le tunnel est limité aux sous-réseaux prévus
-- les accès et échecs sont auditables
+- only the authorized admin user can log in with SSH
+- password authentication is disabled
+- direct root SSH login is disabled
+- traffic between 10.10.10.0/24 and 10.10.20.0/24 is encrypted and integrity protected
+- the tunnel is limited to the intended subnets
+- successful and failed access attempts are auditable
 
 ## 2. Policy statement
 
-Seul l'utilisateur adminX est autorisé à administrer srv-web en SSH avec une clé publique. L'authentification par mot de passe est désactivée. Le login root direct est désactivé. Le trafic entre le LAN du site A et la DMZ du site B passe par un tunnel IPsec IKEv2 entre gw-fw et gw-fw-b. Le tunnel est limité à 10.10.10.0/24 <-> 10.10.20.0/24.
+Only the adminX account may administer srv-web over SSH using a public key. Password authentication is disabled. Direct root login is disabled. Traffic between Site A LAN and Site B DMZ is protected by an IKEv2 IPsec tunnel between gw-fw and gw-fw-b. The tunnel scope is limited to 10.10.10.0/24 <-> 10.10.20.0/24.
 
 ## 3. SSH configuration
 
-Voir:
+See:
 - config/ssh_hardening.md
 - config/sshd_config_excerpt.txt
 
-Contrôles appliqués:
+Applied controls:
 - PasswordAuthentication no
 - PermitRootLogin no
 - AllowUsers adminX
@@ -40,34 +40,34 @@ Contrôles appliqués:
 
 ## 4. IPsec configuration
 
-Voir:
+See:
 - config/ipsec_siteA.conf
 - config/ipsec_siteB.conf
 - config/ipsec.secrets
 
-Choix de conception:
-- IKEv2 avec strongSwan
-- PSK en simplification de labo
-- recommandation production: certificats
+Design choices:
+- IKEv2 with strongSwan
+- PSK as a lab simplification
+- production recommendation: certificates
 
-Portée du tunnel:
+Tunnel scope:
 - Site A: 10.10.10.0/24
 - Site B: 10.10.20.0/24
 
 ## 5. Test plan
 
-Tests positifs:
-- connexion SSH par clé pour adminX
-- tunnel IKEv2 établi
-- ping entre client-kali et srv-web
+Positive tests:
+- SSH key-based login works for adminX
+- IKEv2 tunnel establishes
+- ping between client-kali and srv-web succeeds
 
-Tests négatifs:
-- mot de passe SSH refusé
-- root SSH refusé
+Negative tests:
+- SSH password login is refused
+- root SSH login is refused
 
 ## 6. Telemetry proof
 
-Voir:
+See:
 - evidence/preflight_topology.txt
 - evidence/ssh_tests.txt
 - evidence/authlog_excerpt.txt
@@ -76,7 +76,7 @@ Voir:
 
 ## 7. Residual risks
 
-- PSK non adapté à la production
-- pas de MFA SSH
-- rotation de clés non automatisée
-- dépendance au VPN pour certains contrôles réseau
+- PSK is not suitable for production
+- no SSH MFA
+- no automated key rotation
+- some restrictions depend on VPN availability
