@@ -2,9 +2,7 @@
 # Network Hardenning Coursework
 
 
-**Course:** Network Hardening  
-**Institution:** ESILV  
-**Program:** Year 4 Engineering  
+**Course:** Network Hardening - ESILV  Year 4 Engineering  
 **Team members:** Sara GRAINE  
 **Academic year:** 2025–2026
 
