@@ -1,8 +1,3 @@
-## Introduction
-
-The following test cards were used to validate the final security posture of the lab. Each card links a technical claim to a concrete command, an expected result, and an associated evidence source. The intention is to make the validation reproducible without turning the document into a checklist with no context.
-
----
 
 ## TD5-T01 — Key-based SSH login works for the authorized admin
 
