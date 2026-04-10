@@ -3,6 +3,11 @@
 
 ## Overview
 
+Course: Network Hardening — ESILV, Year 4 Engineering  
+Team members: GRAINE Sara 
+Academic Year: 2025-2026
+
+
 This repository contains the practical work completed for the **Network Hardening** module.  
 It consolidates the different lab sessions into a single engineering-oriented evidence pack.
 
