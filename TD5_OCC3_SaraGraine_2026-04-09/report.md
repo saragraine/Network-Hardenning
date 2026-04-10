@@ -1,7 +1,4 @@
 
-`report.md`
-
-```md
 # TD5 Report — Secure Remote Access: SSH Hardening and Site-to-Site IPsec VPN
 
 ## 1. Introduction
